@@ -1,0 +1,40 @@
+{
+    "train_shape": [
+        4929,
+        20
+    ],
+    "test_shape": [
+        1409,
+        20
+    ],
+    "schema_valid": true,
+    "missing_columns": [],
+    "sufficient_rows": true,
+    "null_counts": {},
+    "dtypes": {
+        "gender": "object",
+        "SeniorCitizen": "int64",
+        "Partner": "object",
+        "Dependents": "object",
+        "tenure": "int64",
+        "PhoneService": "object",
+        "MultipleLines": "object",
+        "InternetService": "object",
+        "OnlineSecurity": "object",
+        "OnlineBackup": "object",
+        "DeviceProtection": "object",
+        "TechSupport": "object",
+        "StreamingTV": "object",
+        "StreamingMovies": "object",
+        "Contract": "object",
+        "PaperlessBilling": "object",
+        "PaymentMethod": "object",
+        "MonthlyCharges": "float64",
+        "TotalCharges": "float64",
+        "Churn": "int64"
+    },
+    "target_distribution": {
+        "0": 3621,
+        "1": 1308
+    }
+}

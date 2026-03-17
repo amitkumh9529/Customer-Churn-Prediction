@@ -1,0 +1,22 @@
+{
+    "tenure": 1.146812,
+    "Contract_Two year": 0.814577,
+    "InternetService_Fiber optic": 0.726786,
+    "MonthlyCharges": 0.72532,
+    "Contract_Month-to-month": 0.707852,
+    "InternetService_DSL": 0.626086,
+    "TotalCharges": 0.521728,
+    "StreamingTV_Yes": 0.287904,
+    "StreamingMovies_Yes": 0.282692,
+    "InternetService_No": 0.275894,
+    "OnlineSecurity_No internet service": 0.275894,
+    "OnlineBackup_No internet service": 0.275894,
+    "DeviceProtection_No internet service": 0.275894,
+    "TechSupport_No internet service": 0.275894,
+    "StreamingTV_No internet service": 0.275894,
+    "StreamingMovies_No internet service": 0.275894,
+    "PaperlessBilling_No": 0.238883,
+    "OnlineSecurity_No": 0.225001,
+    "Dependents_Yes": 0.210051,
+    "PaymentMethod_Electronic check": 0.204845
+}

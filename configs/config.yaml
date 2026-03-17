@@ -1,0 +1,91 @@
+project:
+  name: "customer-churn-prediction"
+  version: "1.0.0"
+  description: "Production ML system for customer churn prediction"
+
+paths:
+  raw_data: "data/raw/Telco-Customer-Churn.csv"
+  interim_data: "data/interim/"
+  processed_data: "data/processed/"
+  artifacts: "artifacts/"
+  models: "artifacts/models/"
+  encoders: "artifacts/encoders/"
+  reports: "artifacts/reports/"
+  logs: "logs/app.log"
+
+data:
+  target_column: "Churn"
+  id_column: "customerID"
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  stratify: true
+
+  numeric_features:
+    - tenure
+    - MonthlyCharges
+    - TotalCharges
+
+  categorical_features:
+    - gender
+    - SeniorCitizen
+    - Partner
+    - Dependents
+    - PhoneService
+    - MultipleLines
+    - InternetService
+    - OnlineSecurity
+    - OnlineBackup
+    - DeviceProtection
+    - TechSupport
+    - StreamingTV
+    - StreamingMovies
+    - Contract
+    - PaperlessBilling
+    - PaymentMethod
+
+  binary_features:
+    - gender
+    - Partner
+    - Dependents
+    - PhoneService
+    - PaperlessBilling
+
+  validation_schema:
+    required_columns:
+      - gender
+      - SeniorCitizen
+      - Partner
+      - Dependents
+      - tenure
+      - PhoneService
+      - MultipleLines
+      - InternetService
+      - OnlineSecurity
+      - OnlineBackup
+      - DeviceProtection
+      - TechSupport
+      - StreamingTV
+      - StreamingMovies
+      - Contract
+      - PaperlessBilling
+      - PaymentMethod
+      - MonthlyCharges
+      - TotalCharges
+      - Churn
+    min_rows: 100
+
+mlflow:
+  tracking_uri: "experiments/mlruns"
+  experiment_name: "customer-churn-prediction"
+  registered_model_name: "ChurnClassifier"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+  workers: 1
+
+logging:
+  level: "INFO"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name}:{function}:{line} - {message}"

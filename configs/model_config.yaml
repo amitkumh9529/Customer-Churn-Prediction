@@ -1,0 +1,47 @@
+models:
+  logistic_regression:
+    enabled: true
+    params:
+      C: 1.0
+      max_iter: 1000
+      solver: "lbfgs"
+      random_state: 42
+      class_weight: "balanced"
+
+  random_forest:
+    enabled: true
+    params:
+      n_estimators: 200
+      max_depth: 10
+      min_samples_split: 5
+      min_samples_leaf: 2
+      random_state: 42
+      class_weight: "balanced"
+      n_jobs: -1
+
+  xgboost:
+    enabled: true
+    params:
+      n_estimators: 200
+      max_depth: 6
+      learning_rate: 0.1
+      subsample: 0.8
+      colsample_bytree: 0.8
+      random_state: 42
+      use_label_encoder: false
+      eval_metric: "logloss"
+      scale_pos_weight: 3
+
+evaluation:
+  primary_metric: "roc_auc"
+  threshold: 0.5
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - roc_auc
+
+model_selection:
+  cross_validation_folds: 5
+  scoring: "roc_auc"
