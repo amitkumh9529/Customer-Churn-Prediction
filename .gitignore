@@ -1,0 +1,138 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+sdist/
+develop-eggs/
+.eggs/
+lib/
+lib64/
+parts/
+var/
+*.manifest
+*.spec
+
+# ─── Virtual Environments ────────────────────────────────────────────────────
+.env
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# ─── ML Artifacts (large binaries — don't commit) ───────────────────────────
+artifacts/models/*.pkl
+artifacts/models/*.joblib
+artifacts/encoders/*.pkl
+artifacts/encoders/*.joblib
+
+# Keep the folder structure in git
+!artifacts/models/.gitkeep
+!artifacts/encoders/.gitkeep
+!artifacts/reports/.gitkeep
+
+# ─── Data (raw data usually too large for git) ───────────────────────────────
+data/interim/
+data/processed/
+
+# Keep raw data folder but not the CSV itself if it's large
+# Comment out the next line if you DO want to track the raw CSV
+data/raw/*.csv
+
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# ─── MLflow ───────────────────────────────────────────────────────────────────
+experiments/mlruns/
+mlruns/
+mlflow.db
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+logs/*.log
+logs/*.log.zip
+!logs/.gitkeep
+
+# ─── Jupyter Notebooks (optional — remove if you want to track them) ─────────
+notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints/
+# Uncomment to ignore notebooks entirely:
+# notebooks/
+
+# ─── Environment / Secrets ───────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+secrets.yaml
+secrets.json
+
+# ─── IDE / Editor ────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+*.sublime-project
+*.sublime-workspace
+
+# ─── OS Files ────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── Testing ─────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+test-results/
+
+# ─── Type Checking ───────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# ─── Frontend ────────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/coverage/
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+.docker/
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
+*.orig
+.cache/
+tmp/
+temp/
