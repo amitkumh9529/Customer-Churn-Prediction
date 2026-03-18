@@ -32,9 +32,9 @@ venv.bak/
 
 # ─── ML Artifacts (large binaries — don't commit) ───────────────────────────
 # artifacts/models/*.pkl
-artifacts/models/*.joblib
-# artifacts/encoders/*.pkl
-artifacts/encoders/*.joblib
+# artifacts/models/*.joblib
+# # artifacts/encoders/*.pkl
+# artifacts/encoders/*.joblib
 
 # Keep the folder structure in git
 # !artifacts/models/.gitkeep
