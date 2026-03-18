@@ -1,0 +1,12 @@
+.git
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+data/
+logs/
+notebooks/
+tests/
+experiments/
+mlruns/
