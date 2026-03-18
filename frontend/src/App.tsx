@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink } from "react-router-dom";
-import { BarChart3, Zap, Github } from "lucide-react";
+import { BarChart3, Github } from "lucide-react";
 import Predict from "./pages/Predict";
 
 function NavItem({
