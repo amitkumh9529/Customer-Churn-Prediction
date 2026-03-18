@@ -44,7 +44,7 @@ export default function App() {
           {/* Nav */}
           <nav className="flex items-center gap-1">
             <NavItem to="/">Predict</NavItem>
-            <a
+            {/* <a
               href="http://localhost:5000"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +59,7 @@ export default function App() {
               className="text-sm font-medium px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all duration-150"
             >
               API Docs
-            </a>
+            </a> */}
           </nav>
 
           {/* Badge */}
@@ -94,10 +94,10 @@ export default function App() {
           <p className="text-xs text-slate-600">
             ChurnScope — Production ML System v1.0.0
           </p>
-          <p className="text-xs text-slate-600 flex items-center gap-1">
+          {/* <p className="text-xs text-slate-600 flex items-center gap-1">
             <Zap size={10} className="text-brand-600" />
             Powered by XGBoost · FastAPI · MLflow
-          </p>
+          </p> */}
         </div>
       </footer>
     </div>

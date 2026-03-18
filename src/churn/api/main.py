@@ -9,7 +9,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from churn.api.router import router
 from churn.api.prediction_service import get_predictor
+from churn.models.model_loader import ModelLoader
 from churn.utils.logger import logger
+
+
 
 
 @asynccontextmanager
@@ -38,6 +41,16 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
+loader = ModelLoader()
+
+@app.on_event("startup")
+def load_model():
+    loader.model
+    loader.pipeline
+
+def get_model():
+    return loader.model
+
 # ── CORS ──────────────────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
@@ -59,3 +72,4 @@ def root():
         "docs": "/docs",
         "health": "/api/v1/health",
     }
+

@@ -37,9 +37,9 @@ artifacts/encoders/*.pkl
 artifacts/encoders/*.joblib
 
 # Keep the folder structure in git
-!artifacts/models/.gitkeep
-!artifacts/encoders/.gitkeep
-!artifacts/reports/.gitkeep
+# !artifacts/models/.gitkeep
+# !artifacts/encoders/.gitkeep
+# !artifacts/reports/.gitkeep
 
 # ─── Data (raw data usually too large for git) ───────────────────────────────
 data/interim/

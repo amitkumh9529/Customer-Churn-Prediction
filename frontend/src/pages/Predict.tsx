@@ -240,7 +240,7 @@ export default function Predict() {
         </div>
 
         {/* Stats strip */}
-        <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {/* <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
             { label: "Dataset", value: "Telco Churn" },
             { label: "Model", value: "XGBoost" },
@@ -254,7 +254,7 @@ export default function Predict() {
               <p className="text-sm font-semibold font-mono text-brand-300">{value}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Main layout */}
@@ -307,7 +307,7 @@ export default function Predict() {
           )}
 
           {/* How it works */}
-          <div className="card p-5">
+          {/* <div className="card p-5">
             <p className="section-title">How It Works</p>
             <ol className="space-y-2.5">
               {[
@@ -324,7 +324,7 @@ export default function Predict() {
                 </li>
               ))}
             </ol>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
